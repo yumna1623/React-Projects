@@ -1,2 +1,23 @@
 PEXELS
 DEVUI
+
+// ---------FOR TAILWIND
+// npm install -D tailwindcss postcss autoprefixer
+
+// npx tailwindcss init -p
+
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//   content: [
+//     "./index.html",
+//     "./src/**/*.{js,ts,jsx,tsx}",
+//   ],
+//   theme: {
+//     extend: {},
+//   },
+//   plugins: [],
+// }
+
+// @import "tailwindcss";
+
+
