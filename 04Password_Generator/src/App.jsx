@@ -7,15 +7,17 @@ function App() {
   const [password, setPassword] = useState("");
 
   //useRef hook
-    const passworfRef  = useRef(null) //
+  const passwordfRef = useRef(null); //
 
-    const copyPasswordToClipBoard = useCallback(()=>{
+  const copyPasswordToClipBoard = useCallback(() => {
+    passwordfRef.current.select()
+    // passwordfRef.current.setSelectionRange(0,3) when you have to select a specific range like you have 9 letter
+    // password but you just want start ke 6 letter to 9 letter
+    window.navigator.clipboard.writeText(password);
+  }, [password]);
 
-        
 
-
-    },[password])
-  const passwordGenerator = useCallback(() => {
+const passwordGenerator = useCallback(() => {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (numberAllowed) str += "0123456789";
@@ -29,9 +31,11 @@ function App() {
     setPassword(pass);
   }, [length, numberAllowed, charAllowed]);
 
-useEffect(() => {
-  passwordGenerator(); // Regenerate the password
-}, [length, numberAllowed, charAllowed, passwordGenerator]);
+
+
+  useEffect(() => {
+    passwordGenerator(); // Regenerate the password
+  }, [length, numberAllowed, charAllowed, passwordGenerator]);
   return (
     <div className=" w-full max-w-md mx-auto shadow-md  px-5 py-10 my-8 bg-gray-800 text-orange-500 rounded-lg">
       <h1 className="text-white text-center my-4 text-2xl">
@@ -43,22 +47,25 @@ useEffect(() => {
           min={6}
           max={12}
           value={password}
-          className="outline-none w-full py-2 px-3 text-white"
+          className="outline-none w-full py-2 px-3 bg-white text-black"
           placeholder="Password"
           readOnly
-          ref={passworfRef}
+          ref={passwordfRef}
         />
-        <button className="bg-orange-600 text-white px-4 py-2 hover:bg-orange-500"
-        onClick={()=>{
-            copyPasswordToClipBoard
-        }}
+
+        <button
+          className="bg-orange-600 text-white px-4 py-2 hover:bg-orange-500"
+          onClick={() => {
+            copyPasswordToClipBoard();
+            alert("Password copied to clipboard");
+          }}
         >
           Copy
         </button>
       </div>
 
       <div className="flex text-sm gap-x-2">
-        <div className="flex fles -items-center gap-x-1">
+        <div className="flex flex-items-center gap-x-1">
           <input
             type="range"
             min={6}
@@ -80,7 +87,7 @@ useEffect(() => {
             onChange={(e) => {
               setNumberAllowed((prev) => !prev);
             }}
-          />{" "}
+          />
           <label>Numbers</label>
           <input
             type="checkbox"
@@ -92,7 +99,7 @@ useEffect(() => {
             }}
           />
           <label>Characters</label>
-          </div>
+        </div>
       </div>
     </div>
   );
