@@ -23,4 +23,12 @@ DEVUI
 // ------------------------------------FOR VITE ----------------------------------
 // npm create vite@latest
 
+// ------------------------------------REACT ROUTER INSTALLATION----------------------------------
+// npm i react-router-dom
+// ----------------------------------------------------------
+{/* <link> === a 
+when we use  a tag it will
+refresh the whole page */}
 
+{/* <NavLink></NavLink> */}
+// we write to in this
