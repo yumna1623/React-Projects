@@ -1,7 +1,7 @@
 PEXELS
 DEVUI
 
-// ---------FOR TAILWIND
+// ----------------------------------------------------------------------------FOR TAILWIND
 // npm install -D tailwindcss postcss autoprefixer
 
 // npx tailwindcss init -p
@@ -19,5 +19,8 @@ DEVUI
 // }
 
 // @import "tailwindcss";
+
+// ------------------------------------FOR VITE ----------------------------------
+// npm create vite@latest
 
 
