@@ -5,26 +5,28 @@ import Layout from './layout'
 import Home from './COMPONENTS/Home/Home'
 import About from './COMPONENTS/About/About'
 import Contact from './COMPONENTS/Contact/Contact'
-import Github from './COMPONENTS/Github/Github'
 import User from './COMPONENTS/User/User'
-import App from "./App";
+import Github,{githubInfoLoader} from "./COMPONENTS/Github/Github.jsx";
 import './index.css'
 
 
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />,
-    children: [
-      { path: "", element: <Home/> },
-      { path: "about", element: <About/> },
-      { path: "contact", element: <Contact/> },
-      { path: "github", element: <Github/> },
-      { path: "user/:userid", element: <User/> },
-    ],
-  },
-]);
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { path: "", element: <Home/> },
+        { path: "about", element: <About/> },
+        { path: "contact", element: <Contact/> },
+        { path: "github", 
+          loader: githubInfoLoader,  // ✅ Corrected syntax
+          element: <Github/> 
+        },
+        { path: "user/:userid", element: <User/> }, // No loader needed here
+      ],
+    },
+  ]);
 //this is also good but we can use the this too
 // const router = createBrowserRouter(
 //     createRoutesFromElements(
