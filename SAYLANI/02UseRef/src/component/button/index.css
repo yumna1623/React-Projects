@@ -1,0 +1,8 @@
+.btn{
+    width: 100%;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: cadetblue;
+    margin-top: 140px;
+    cursor: pointer;
+}
