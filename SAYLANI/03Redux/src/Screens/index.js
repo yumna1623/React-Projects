@@ -1,7 +1,8 @@
-import Home from './Home'
+import Home from './Homee'
 import Login from './Login'
+import NavBar from './NavBar';
 
 
 
 
-export { Home, Login };
+export { Home, Login,NavBar };
