@@ -32,3 +32,33 @@ refresh the whole page */}
 
 {/* <NavLink></NavLink> */}
 // we write to in this
+// ----------------------------------------------------------------------------------------------
+// react ->library
+// react dom->library
+
+// both of them are important
+// redux->indepedent state management library
+
+// why using both f them
+// react redux ->
+// redux tool kit ->
+
+// ------------------------------------redux
+// npm i react-redux redux
+// /we use redux because we want to share the state between the components 
+// without facing prop drilling problem 
+//actions , reducers , storecreate
+
+// make a store.js file
+
+// // import { configureStore } from '@reduxjs/toolkit';
+
+// import {configureStore, configureSTore} from '@reduxjs/toolkit'
+// import todoReducer from '../features/todo/todoSlice'
+// export const store = configureStore({
+//     reducer:todoReducer
+// })
+
+// ---useState
+// 1)when state changed
+// 2)when prop change
