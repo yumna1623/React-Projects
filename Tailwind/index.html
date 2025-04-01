@@ -12,7 +12,8 @@
     <title>Tailwind</title>
   </head>
   <body>
-    <!-- NAVBAR -->
+    <!--------------------------------------- NAVBAR ----------------------------------------------------->
+    <!--------------------------------------- NAVBAR ----------------------------------------------------->
     <nav class="p-3 flex bg-white justify-between items-center">
       <a href="#" id="brand" class="flex items-center gap-2">
         <img
@@ -25,14 +26,24 @@
 
       <!-- menu -->
       <div id="nav-menu" class="hidden md:flex gap-12">
-        <a href="#" class="font-medium  hover:text-blue-700 hover:underline">Pricing</a>
-        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Docs</a>
-        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Changelog</a>
-        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Blogs</a>
-        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Login</a>
+        <a href="#" class="font-medium hover:text-blue-700 hover:underline"
+          >Pricing</a
+        >
+        <a href="#" class="font-medium hover:text-blue-700 hover:underline"
+          >Docs</a
+        >
+        <a href="#" class="font-medium hover:text-blue-700 hover:underline"
+          >Changelog</a
+        >
+        <a href="#" class="font-medium hover:text-blue-700 hover:underline"
+          >Blogs</a
+        >
+        <a href="#" class="font-medium hover:text-blue-700 hover:underline"
+          >Login</a
+        >
       </div>
       <button
-        class="hidden md:flex border-2 border-gray-400 rounded bg-primary px-4 py-2 font-medium  hover:border-gray-800  transition duration-200 ease-in-out"
+        class="hidden md:flex border-2 border-gray-400 rounded bg-primary px-4 py-2 font-medium hover:border-gray-800 transition duration-200 ease-in-out"
       >
         <img src="./assets/electron-icon.E8mrXtZM.svg" alt="" />
         Electron Developer
@@ -40,16 +51,61 @@
       </button>
 
       <button class="p-2 md:hidden" title="Menu" onclick="handleMenu()">
-        <i class="fa-solid fa-bars text-gray-600" aria-hidden="true"></i
-        ><span class="sr-only">Menu</span>
+        <i class="fa-solid fa-bars text-gray-600"></i>
       </button>
 
-      <!-- MENU FOR MOBILE -->
 
-      <div class="fixed bg-white inset-0">
-        
+      <!--------------------------------------------- MENU FOR MOBILE ------------------------------------------------->
+      <!--------------------------------------------- MENU FOR MOBILE ------------------------------------------------->
+      <div class=" hidden fixed inset-0 bg-white p-2  z-10 md:hidden" id="navDialog">
+        <!-- Navbar Section -->
+        <div id="navbar" class="flex justify-between">
+          <a href="#" id="brand" class="flex items-center gap-2">
+            <img class="object-cover max-w-12 max-h-18" src="./assets/todesktop-logo.bn2Qe8sb.avif" alt="logo" />
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+          </a>
+          <button class="p-2 md:hidden" title="Close Menu" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+          </button>
+        </div>
+      
+        <!-- Navigation Links -->
+        <div class="flex flex-col items-start mt-4 gap-16">
+            <a href="#" class="font-medium px-4 py-2 rounded hover:bg-gray-200 hover:text-blue-700 hover:underline transition duration-200">
+            Pricing
+          </a>
+          <a href="#" class="font-medium px-4 py-2 rounded hover:bg-gray-200 hover:text-blue-700 hover:underline transition duration-200">
+            Docs
+          </a>
+          <a href="#" class="font-medium px-4 py-2 rounded hover:bg-gray-200 hover:text-blue-700 hover:underline transition duration-200">
+            Changelog
+          </a>
+          <a href="#" class="font-medium px-4 py-2 rounded hover:bg-gray-200 hover:text-blue-700 hover:underline transition duration-200">
+            Blogs
+          </a>
+          <a href="#" class="font-medium px-4 py-2 rounded hover:bg-gray-200 hover:text-blue-700 hover:underline transition duration-200">
+            Login
+          </a>
+        </div><br>
+      
+        <!-- Divider -->
+        <div class="h-[1px] bg-gray-600 mt-4 w-full">
+            _____________________________________
+        </div><br>
+      
+        <!-- Button -->
+        <div class="mt-6 pt-4 py-4 gap-4">
+            <button class="w-full flex border border-gray-400 rounded px-6 py-2 hover:border-gray-800 mt-6">
+                <img src="./assets/electron-icon.E8mrXtZM.svg" alt="" />
+                Electron Developer
+              </button>
+        </div>
       </div>
+      
     </nav>
+
+
+    
   </body>
   <script src="./script.js"></script>
 </html>
