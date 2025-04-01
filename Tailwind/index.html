@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Tailwind</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="p-3 flex bg-white justify-between items-center">
+      <a href="#" id="brand" class="flex items-center gap-2">
+        <img
+          class="object-cover max-w-12 max-h-18"
+          src="./assets/todesktop-logo.bn2Qe8sb.avif"
+          alt="logo"
+        />
+        <span class="text-lg font-medium font-display">ToDesktop</span>
+      </a>
+
+      <!-- menu -->
+      <div id="nav-menu" class="hidden md:flex gap-12">
+        <a href="#" class="font-medium  hover:text-blue-700 hover:underline">Pricing</a>
+        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Docs</a>
+        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Changelog</a>
+        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Blogs</a>
+        <a href="#" class="font-medium   hover:text-blue-700  hover:underline">Login</a>
+      </div>
+      <button
+        class="hidden md:flex border-2 border-gray-400 rounded bg-primary px-4 py-2 font-medium  hover:border-gray-800  transition duration-200 ease-in-out"
+      >
+        <img src="./assets/electron-icon.E8mrXtZM.svg" alt="" />
+        Electron Developer
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+      <button class="p-2 md:hidden" title="Menu" onclick="handleMenu()">
+        <i class="fa-solid fa-bars text-gray-600" aria-hidden="true"></i
+        ><span class="sr-only">Menu</span>
+      </button>
+
+      <!-- MENU FOR MOBILE -->
+
+      <div class="fixed bg-white inset-0">
+        
+      </div>
+    </nav>
+  </body>
+  <script src="./script.js"></script>
+</html>
