@@ -1,6 +1,21 @@
-PEXELS
-DEVUI
+// PEXELS
+// DEVUI
+// in app like if we login one time it will take us to dashboard until we logout so how to do this using firebase
 
+
+
+// react-routing => browserRoter
+// -------------------friebase
+// npm install firebase
+// copy the config
+// import { getAuth } from "firebase/auth";
+// import {getDataBase} from "firebase/database";
+
+// const app = initializeApp(firebaseConfig);
+// const auth = getAuth(app);
+// const database = getDataBase(app);
+
+// export { auth, database };
 // ----------------------------------------------------------------------------FOR TAILWIND
 // npm install -D tailwindcss postcss autoprefixer
 
@@ -32,16 +47,16 @@ refresh the whole page */}
 
 {/* <NavLink></NavLink> */}
 // we write to in this
-// ----------------------------------------------------------------------------------------------
-// react ->library
-// react dom->library
 
-// both of them are important
-// redux->indepedent state management library
 
-// why using both f them
-// react redux ->
-// redux tool kit ->
+// ------------------------------------redux_Toolkit----------------------------------
+// npm install @reduxjs/toolkit react-redux
+// npm install react-redux
+// in store you have to make a folder calle createSlice(logic of the app) and then you have to make 
+// a folder called reducer(logic of the app)
+
+
+
 
 // ------------------------------------redux
 // npm i react-redux redux
@@ -62,3 +77,10 @@ refresh the whole page */}
 // ---useState
 // 1)when state changed
 // 2)when prop change
+
+
+// -------reducers
+// we pass function in the reducers
+
+
+

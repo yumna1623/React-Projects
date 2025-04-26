@@ -6,12 +6,16 @@ import { Button } from "./component";
 
 function App() {
 
-    const isUserLogin = useSelector((state) => state.auth.isLoggedIn);
+    const isUserLogin = useSelector((state) => state.auth.isLoggedin);
+    console.log(isUserLogin);
+    
 
   return (
     <>
 
-{isUserLogin ? <Home /> : <Login />}     
+    {isUserLogin ? <Home /> : <Login />}    
+    
+
     </>
   );
 }
