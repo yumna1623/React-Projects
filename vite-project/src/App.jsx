@@ -1,36 +1,47 @@
 import { nanoid } from "@reduxjs/toolkit";
-import "./App.css";
-import NotesList from "./component/NotesList";
-import React, { useState } from "react";
-import AddNote from "./component/AddNote";
-import { account, ID } from './../lib/appwrite';
+import "./component/notesList.css";
+import React, { useState, useEffect } from "react";
+import { db } from "./config"; // Your config file
+import { ref, push, onValue } from "firebase/database";
+import NotesList from "./component/NotesList"
 
 function App() {
-  const [Notes, setNotes] = useState([
-    { id: nanoid(), text: "hello and welcome to school" , date: "12/12/12" },
-    { id: nanoid(), text: "hello and welcome to school" , date: "12/12/12" },
-    { id: nanoid(), text: "hello and welcome to school" , date: "12/12/12" },
-    { id: nanoid(), text: "hello and welcome to school" , date: "12/12/12" },
-  ]);
-    const addNote = (text) => {
-        const date = new Date();
-        const newNote = {
-        id: nanoid(),
-        text: text,
-        date: date.toLocaleDateString(),
-        };
-        const newNotes = [...Notes, newNote];
-        setNotes(newNotes);
-        console.log(text);
-        
+  const [Notes, setNotes] = useState([]);
+
+  // 🔽 Load notes from Firebase on app start
+  useEffect(() => {
+    const notesRef = ref(db, "notes");
+    onValue(notesRef, (snapshot) => {
+      const data = snapshot.val();
+      const loadedNotes = data ? Object.values(data) : [];
+      setNotes(loadedNotes);
+    });
+  }, []);
+
+  // 🔼 Save note to Firebase
+  const addNote = (text) => {
+    const date = new Date();
+    const newNote = {
+      id: nanoid(),
+      text: text,
+      date: date.toLocaleDateString(),
     };
+
+    const notesRef = ref(db, "notes");
+    push(notesRef, newNote)
+      .then(() => {
+        alert("Note added to Firebase successfully!");
+      })
+      .catch((error) => {
+        console.error("Error adding note:", error);
+        alert("Failed to add note. Please try again.");
+      });
+  };
+
   return (
-    <>
-      <div className="container">
-        <NotesList Notes={Notes} handleAddNote={addNote} />
-        
-      </div>
-    </>
+    <div className="container">
+      <NotesList Notes={Notes} handleAddNote={addNote} />
+    </div>
   );
 }
 
