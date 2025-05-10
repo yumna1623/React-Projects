@@ -1,0 +1,32 @@
+<!-- tech guns -->
+<!-- ws cube tag tailwind -->
+
+
+
+    // const [cart, setCart] = useState([]) 
+    // array destructuring syntax useState hook
+    //  return array with 2 elements 1)state 2)update state
+
+    <!-- useEffect return cleanUp func -->
+
+    // what are REACT HOOKS?
+    // React Hooks are functions that let you use state and other React features without writing a class.
+
+
+    // why we name component in capital letter?
+    // React treats components starting with lowercase letters as DOM tags. For example, <div> is a DOM tag, but <MyComponent> is a component. If you start a component name with a lowercase letter, React will not recognize it as a component and will treat it as a DOM tag instead.
+    // This can lead to unexpected behavior and errors in your application. By convention, React components should always start with a capital letter to avoid this confusion.
+
+    <!-- react founder name The founder of React is Jordan Walke. -->
+
+    <!-- javascript founder Brendan Eich. -->
+     <!-- Types of functions -->
+
+
+     <!-- npm install react-bootstrap bootstrap -->
+
+
+    
+
+
+
