@@ -67,6 +67,7 @@ Databases can be stored in **tabular (SQL)** or **JSON/BSON (NoSQL)** formats fo
 
 * **Format**: Binary-based, not human-readable
 * **Used By**: MongoDB (for database storage)
+
 * **Advantages**:
 
   * Faster to parse and generate
