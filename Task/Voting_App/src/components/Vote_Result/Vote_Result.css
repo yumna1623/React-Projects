@@ -1,0 +1,77 @@
+.vote-result {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #f0f4f8; /* Softer background */
+  border: 1px solid #e1e8ed; /* Subtle border */
+}
+
+.vote-result h2 {
+  margin: 0 0 20px 0;
+  color: #26ca20; /* Modern blue instead of green */
+  font-size: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #e1e8ed; /* Lighter border */
+  width: 100%;
+}
+
+.result-display {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.result-display p {
+  background-color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px; /* More rounded corners */
+  margin: 0.75rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e1e8ed; /* Subtle border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Very subtle shadow */
+  transition: all 0.2s ease;
+}
+
+.result-display p:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: #d0dbe6;
+}
+
+.result-display p span:first-child {
+  font-weight: 500;
+  color: #4b5563; /* Dark gray */
+}
+
+.result-display p span:last-child {
+  font-weight: 700;
+  color: #1e40af; /* Dark blue */
+  background-color: #eff6ff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+/* Reset button styling */
+.vote-result .cool-btn {
+  margin-top: 10px;
+  background-color: #3b82f6;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.vote-result .cool-btn:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}

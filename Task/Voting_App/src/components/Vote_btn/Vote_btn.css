@@ -1,0 +1,19 @@
+.cool-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  border-radius: 20px;
+}
+
+.cool-btn:hover {
+  border-radius: 50px; /* More rounded on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+.vote-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+

@@ -1,0 +1,21 @@
+.vote-box {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #c7d1dd; /* Light background */
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.vote-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #111827; /* Dark text */
+}
+
+.vote-box button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
