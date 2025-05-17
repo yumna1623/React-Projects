@@ -12,6 +12,24 @@ show collections
 db.help()
 db.collection_name.help()
 
+-------------------------------------------📁 Database Commands
+Command	Description
+show dbs	Lists all available databases
+use database_name	Switches to (or creates) a database
+db	Displays the current database
+db.dropDatabase()	Deletes the current database
+show collections	Lists all collections in the current database
+db.stats()	Shows statistics for the current database
+
+-------------------------------------------📦 Collection Commands
+Command	Description
+db.createCollection("collection_name")	Creates a new collection
+db.collection_name.drop()	Deletes a collection
+db.old_name.renameCollection("new_name")	Renames a collection (you must be in the admin database or use full namespace syntax like db.getSiblingDB('mydb').mycol.renameCollection(...))
+show collections	Lists all collections in the current database
+
+
+
 
 
 ## 📦 **Database Formats: SQL vs NoSQL vs JSON/BSON**
