@@ -1,6 +1,18 @@
-Here’s your content cleaned up and **well-formatted** with comments removed and sections clearly labeled. I’ve also corrected minor spelling and grammar issues to improve clarity:
+files in database = collection
+data in file = records/document
 
----
+show dbs
+use database_name
+db.dropDatabase()
+
+db.createCollection("collection_name")
+db.old_name.renameCollection("New_name")
+db.collection_name.drop()
+show collections
+db.help()
+db.collection_name.help()
+
+
 
 ## 📦 **Database Formats: SQL vs NoSQL vs JSON/BSON**
 
