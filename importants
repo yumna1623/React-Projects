@@ -123,6 +123,11 @@ Databases can be stored in **tabular (SQL)** or **JSON/BSON (NoSQL)** formats fo
 
 ## 🌍 **Advantages of NoSQL & BSON**
 
+In MongoDB, a schema refers to the structure or blueprint of how data is organized 
+in a collection — like what fields exist
+in a document, their data types, relationships, constraints, etc.
+
+
 * Flexible schema design
 * Horizontal scalability through **sharding**
 
