@@ -1,0 +1,58 @@
+When you go from /home to /about, the Home component is unmounted, and About is mounted.
+
+----------------------------✅ UNMOUNTED WHEN:
+        CONDITIONAL RENDERING
+{show ? <Profile /> : null}
+If show is true → <Profile /> is mounted (added)
+If show becomes false → <Profile /> is unmounted (removed)
+ So if <Profile /> had a useEffect, its cleanup function will run when it disappears.
+         Page or Route Change
+<Route path="/home" element={<Home />} />
+<Route path="/about" element={<About />} />
+
+// Runs only once
+useEffect(() => {
+  console.log("Mounted only once");
+}, []);
+
+// Runs every time component renders
+useEffect(() => {
+  console.log("Runs after every render");
+});
+
+“Props are used to pass data into a component, while state is used to manage
+data inside the component. Props are immutable, state is mutable.”
+
+✅ let
+Block scoped (only exists inside {})
+Can be updated but not re-declared in same scope
+
+✅ const
+Block scoped
+Cannot be re-assigned or re-declared
+Must be initialized at the time of declaration
+
+✅ What is the DOM?
+DOM stands for Document Object Model. It is:
+A structured representation (tree-like) of your HTML document.
+Automatically created by the browser when the page loads.
+Each HTML element becomes a node/object in this tree.
+Purpose of DOM
+It lets JavaScript interact with the page.
+You can use javaScript to:
+Read or change content (textContent, innerHTML)
+Change styles (element.style)
+Add or remove elements (appendChild, removeChild)
+Handle events like clicks (addEventListener)
+ The DOM allows you to change HTML and CSS dynamically using JavaScript without reloading the page.
+
+	== compares values (with coercion), === checks type + value
+
+
+
+
+
+
+
+
+
